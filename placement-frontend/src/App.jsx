@@ -27,7 +27,8 @@ function App() {
 
 
       {/* IMPORTANT ROUTES */}
-      <Route path="/add-student" element={<AddStudent />} />
+      +<Route path="/add-student" element={<AddStudent />} />
+
       <Route path="/add-company" element={<AddCompany />} />
       <Route path="/view-eligibility" element={<ViewEligibility />} />
       <Route path="/upload-resume/:applicationId" element={<UploadResume />} />

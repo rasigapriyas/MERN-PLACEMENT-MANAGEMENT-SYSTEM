@@ -1,0 +1,81 @@
+/* ===== Full Page Layout ===== */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Card ===== */
+.home-card {
+  background-color: #ffffff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ===== Title ===== */
+.home-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 35px;
+}
+
+/* ===== Buttons ===== */
+.home-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: #1271bf;
+}
+
+.btn-primary:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #4b5563;
+}
+
+.btn-secondary:hover {
+  background-color: #374151;
+  transform: translateY(-2px);
+}
+
+/* Click Effect */
+.home-btn:active {
+  transform: scale(0.97);
+}
+
+/* ===== Fade Animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

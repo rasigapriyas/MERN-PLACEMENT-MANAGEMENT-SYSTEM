@@ -1,7 +1,7 @@
-
 import { useState } from "react";
 import axios from "axios";
 import AdminLayout from "../components/AdminLayout";
+import "../css/AddStudent.css";
 
 export default function AddStudent() {
 
@@ -48,82 +48,77 @@ export default function AddStudent() {
   };
 
   return (
-    <AdminLayout>
+  
+      <div className="student-page">
 
-      <h2 className="text-3xl font-semibold mb-6">
-        Add Student
-      </h2>
+        <h2 className="student-title">Add Student</h2>
 
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white p-8 rounded-xl shadow-md max-w-lg space-y-4"
-      >
+        <form onSubmit={handleSubmit} className="student-form">
 
-        <input
-          name="name"
-          placeholder="Name"
-          value={student.name}
-          onChange={handleChange}
-          className="w-full p-3 border rounded"
-          required
-        />
+          <input
+            name="name"
+            placeholder="Name"
+            value={student.name}
+            onChange={handleChange}
+            className="student-input"
+            required
+          />
 
-        <input
-          name="registerNo"
-          placeholder="Register Number"
-          value={student.registerNo}
-          onChange={handleChange}
-          className="w-full p-3 border rounded"
-          required
-        />
+          <input
+            name="registerNo"
+            placeholder="Register Number"
+            value={student.registerNo}
+            onChange={handleChange}
+            className="student-input"
+            required
+          />
 
-        <input
-          name="email"
-          placeholder="Email"
-          value={student.email}
-          onChange={handleChange}
-          className="w-full p-3 border rounded"
-          required
-        />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={student.email}
+            onChange={handleChange}
+            className="student-input"
+            required
+          />
 
-        <input
-          type="number"
-          name="cgpa"
-          placeholder="CGPA"
-          value={student.cgpa}
-          onChange={handleChange}
-          className="w-full p-3 border rounded"
-          required
-        />
+          <input
+            type="number"
+            name="cgpa"
+            placeholder="CGPA"
+            value={student.cgpa}
+            onChange={handleChange}
+            className="student-input"
+            required
+          />
 
-        <input
-          type="number"
-          name="arrears"
-          placeholder="Arrears"
-          value={student.arrears}
-          onChange={handleChange}
-          className="w-full p-3 border rounded"
-          required
-        />
+          <input
+            type="number"
+            name="arrears"
+            placeholder="Arrears"
+            value={student.arrears}
+            onChange={handleChange}
+            className="student-input"
+            required
+          />
 
-        <input
-          name="skills"
-          placeholder="Skills (comma separated)"
-          value={student.skills}
-          onChange={handleChange}
-          className="w-full p-3 border rounded"
-          required
-        />
+          <input
+            name="skills"
+            placeholder="Skills (comma separated)"
+            value={student.skills}
+            onChange={handleChange}
+            className="student-input"
+            required
+          />
 
-        <button
-          type="submit"
-          className="w-full bg-slate-800 text-white p-3 rounded hover:bg-slate-900"
-        >
-          Add Student
-        </button>
+          <button type="submit" className="student-button">
+            Add Student
+          </button>
 
-      </form>
+        </form>
 
-    </AdminLayout>
+      </div>
+    
   );
 }

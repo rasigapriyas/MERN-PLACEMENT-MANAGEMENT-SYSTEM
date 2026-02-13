@@ -1,8 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "../css/StudentLogin.css";
 
 export default function StudentLogin() {
+
   const navigate = useNavigate();
 
   const [registerNo, setRegisterNo] = useState("");
@@ -10,7 +12,7 @@ export default function StudentLogin() {
   const [error, setError] = useState("");
 
   const handleLogin = async (e) => {
-    e.preventDefault();   // 🔥 prevent page refresh
+    e.preventDefault();
 
     try {
       const res = await axios.post(
@@ -21,9 +23,7 @@ export default function StudentLogin() {
         }
       );
 
-      // Save full student object
       localStorage.setItem("student", JSON.stringify(res.data));
-
       navigate("/student-dashboard");
 
     } catch (error) {
@@ -32,17 +32,20 @@ export default function StudentLogin() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-100">
-      <div className="bg-white p-8 rounded-xl shadow-lg w-96">
-        <h2 className="text-xl font-semibold text-slate-700 mb-6 text-center">
+    <div className="student-login-container">
+
+      <div className="student-login-card">
+
+        <h2 className="student-login-title">
           Student Login
         </h2>
 
-        <form onSubmit={handleLogin} className="space-y-4">
+        <form onSubmit={handleLogin} className="student-login-form">
+
           <input
             type="text"
             placeholder="Register Number"
-            className="w-full p-2 border rounded"
+            className="student-login-input"
             value={registerNo}
             onChange={(e) => setRegisterNo(e.target.value)}
             required
@@ -51,24 +54,29 @@ export default function StudentLogin() {
           <input
             type="email"
             placeholder="Email"
-            className="w-full p-2 border rounded"
+            className="student-login-input"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
 
           {error && (
-            <p className="text-red-500 text-sm text-center">{error}</p>
+            <p className="student-login-error">
+              {error}
+            </p>
           )}
 
           <button
             type="submit"
-            className="w-full bg-slate-700 text-white p-2 rounded hover:bg-slate-800 transition"
+            className="student-login-button"
           >
             Login
           </button>
+
         </form>
+
       </div>
+
     </div>
   );
 }

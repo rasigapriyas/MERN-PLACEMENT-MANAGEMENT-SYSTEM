@@ -1,0 +1,110 @@
+/* ===== Page Layout ===== */
+.eligibility-container {
+  min-height: 100vh;
+  background-color: #f1f5f9;
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Title ===== */
+.eligibility-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+/* ===== Dropdown ===== */
+.eligibility-select {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.eligibility-select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* ===== Buttons Container ===== */
+.eligibility-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+/* ===== Buttons ===== */
+.btn-primary,
+.btn-success {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background-color: #16a34a;
+}
+
+.btn-success:hover {
+  background-color: #15803d;
+  transform: translateY(-2px);
+}
+
+/* ===== Applications ===== */
+.application-list {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.application-card {
+  background-color: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+/* ===== Resume Link ===== */
+.resume-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #2563eb;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.resume-link:hover {
+  color: #1d4ed8;
+}
+
+/* ===== No Resume ===== */
+.no-resume {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* ===== No Data ===== */
+.no-data {
+  font-size: 14px;
+  color: #64748b;
+}

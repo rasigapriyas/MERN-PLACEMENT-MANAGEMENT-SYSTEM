@@ -1,0 +1,71 @@
+/* Full Page Background */
+.add-company-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  padding: 20px;
+}
+
+/* Card */
+.add-company-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.add-company-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Form Layout */
+.add-company-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+.form-input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #334155;
+  box-shadow: 0 0 0 2px rgba(51, 65, 85, 0.2);
+}
+
+/* Button */
+.submit-button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #334155;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #1e293b;
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}

@@ -1,0 +1,84 @@
+/* ===== Page Layout ===== */
+.manage-companies-container {
+  min-height: 100vh;
+  background-color: #f1f5f9;
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Title ===== */
+.manage-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+/* ===== No Data Text ===== */
+.no-companies {
+  font-size: 15px;
+  color: #64748b;
+}
+
+/* ===== Card Wrapper ===== */
+.companies-card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  max-width: 750px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Individual Company Row ===== */
+.company-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.company-row:hover {
+  background-color: #f8fafc;
+}
+
+/* ===== Company Info ===== */
+.company-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #0f172a;
+}
+
+.company-status {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* ===== Close Button ===== */
+.close-btn {
+  padding: 8px 14px;
+  background-color: #dc2626;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #b91c1c;
+  transform: translateY(-2px);
+}
+
+.close-btn:active {
+  transform: scale(0.96);
+}

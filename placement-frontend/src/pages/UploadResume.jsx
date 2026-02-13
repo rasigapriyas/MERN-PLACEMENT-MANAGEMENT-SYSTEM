@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import "../css/UploadResume.css";
 
 export default function UploadResume() {
 
@@ -33,22 +34,40 @@ export default function UploadResume() {
   };
 
   return (
-    <div style={{ padding: "40px", textAlign: "center" }}>
-      <h2>Upload Resume (PDF Only)</h2>
+    <div className="upload-container">
 
-      <form onSubmit={handleUpload} style={{ marginTop: "20px" }}>
-        <input
-          type="file"
-          accept=".pdf"
-          onChange={(e) => setFile(e.target.files[0])}
-        />
+      <div className="upload-card">
 
-        <br /><br />
+        <h2 className="upload-title">
+          Upload Resume (PDF Only)
+        </h2>
 
-        <button type="submit">
-          Upload Resume
-        </button>
-      </form>
+        <form onSubmit={handleUpload} className="upload-form">
+
+          <label className="file-label">
+            Choose PDF File
+            <input
+              type="file"
+              accept=".pdf"
+              onChange={(e) => setFile(e.target.files[0])}
+              className="file-input"
+            />
+          </label>
+
+          {file && (
+            <p className="file-name">
+              Selected: {file.name}
+            </p>
+          )}
+
+          <button type="submit" className="upload-button">
+            Upload Resume
+          </button>
+
+        </form>
+
+      </div>
+
     </div>
   );
 }

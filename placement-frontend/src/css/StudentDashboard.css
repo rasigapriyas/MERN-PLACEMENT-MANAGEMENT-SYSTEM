@@ -1,0 +1,107 @@
+/* ===== Page Layout ===== */
+.student-dashboard-container {
+  min-height: 100vh;
+  background-color: #f1f5f9;
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Section Heading ===== */
+.dashboard-heading {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+/* ===== Company List ===== */
+.company-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ===== Company Card ===== */
+.company-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+}
+
+.company-card:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== Company Title ===== */
+.company-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+/* ===== Company Details ===== */
+.company-detail {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+/* ===== Apply Button ===== */
+.apply-btn {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.apply-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.apply-btn:active {
+  transform: scale(0.96);
+}
+
+/* ===== Divider ===== */
+.section-divider {
+  margin: 40px 0;
+  border: none;
+  height: 1px;
+  background-color: #cbd5e1;
+}
+
+/* ===== Application Cards ===== */
+.application-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.application-card {
+  background-color: #ffffff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== Status Text ===== */
+.status-text {
+  margin-left: 6px;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* ===== No Data Text ===== */
+.no-data {
+  font-size: 14px;
+  color: #64748b;
+}

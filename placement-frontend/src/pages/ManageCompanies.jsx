@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "../css/ManageCompanies.css";
 
 export default function ManageCompanies() {
 
@@ -34,26 +35,28 @@ export default function ManageCompanies() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 p-10">
+    <div className="manage-companies-container">
 
-      <h1 className="text-2xl font-bold mb-6">
+      <h1 className="manage-title">
         Manage Companies
       </h1>
 
       {companies.length === 0 ? (
-        <p>No companies found</p>
+        <p className="no-companies">No companies found</p>
       ) : (
-        <div className="bg-white p-6 rounded shadow max-w-3xl">
+        <div className="companies-card">
+
           {companies.map((company) => (
             <div
               key={company._id}
-              className="flex justify-between items-center border p-3 mb-2 rounded"
+              className="company-row"
             >
-              <div>
-                <p className="font-semibold">
+
+              <div className="company-info">
+                <p className="company-name">
                   {company.companyName}
                 </p>
-                <p className="text-sm">
+                <p className="company-status">
                   Status: {company.status}
                 </p>
               </div>
@@ -61,13 +64,15 @@ export default function ManageCompanies() {
               {company.status === "Open" && (
                 <button
                   onClick={() => handleCloseCompany(company._id)}
-                  className="bg-red-500 text-white px-3 py-1 rounded"
+                  className="close-btn"
                 >
                   Close Drive
                 </button>
               )}
+
             </div>
           ))}
+
         </div>
       )}
 
